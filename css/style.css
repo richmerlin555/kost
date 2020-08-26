@@ -102,6 +102,7 @@ body.lock {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
+    padding: 0 75px;
 }
 
 .container {
