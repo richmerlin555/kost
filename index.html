@@ -87,22 +87,30 @@
 
                 </div>
             </div>
-            <form action="../kost/telegram.php" method="POST" class="section_form">
-                <text class="form_text">Хотите больше подробностей, узнать свободна ли ваша дата свадьбы? Вы можете оставить нам заявку на обратный звонок и мы свяжемся с вами в ближайшее время
+            <form id="form-contact" method="POST" class="form-element" autocomplete="off" class="section_form">
+                <p class="form_text" class="form-title">Хотите больше подробностей, узнать свободна ли ваша дата свадьбы? Вы можете оставить нам заявку на обратный звонок и мы свяжемся с вами в ближайшее время
 
-                </text>
+                </p>
+                <p class="form-message"></p>
                 <div class="form">
                     <div>
                         <h3 class="form_name">ім'я</h3>
-                        <input type="text" name="user_name" class="form_control" placeholder="Ім'я">
+                        <input name="name" type="text" class="form-input__name" tabindex="0" placeholder="Введите ваше имя" required>
+
                     </div>
                     <div class="form_name">
                         <h3 class="form_name">номер телефону</h3>
-                        <input type="text" name="user_phone" class="form_control" placeholder="+3 (000) 00 00 000">
+                        <input name="phone" type="tel" class="form-input__phone" tabindex="0" pattern="^[ 0-9]+$" placeholder="Введите ваш телефон" required>
                     </div>
+                    <input name="theme" type="hidden" class="form-input__theme" value="Заявка с сайта">
                 </div>
-                <button type="submit" class="btn">Зворотній дзвінок</button>
+                <input type="submit" class="btn" value="Зворотній дзвінок">
             </form>
+
+
+
+
+
         </div>
 
 
@@ -117,6 +125,8 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/telegramform.js"></script>
 
 </body>
 
